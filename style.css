@@ -321,17 +321,19 @@ main {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    line-height: 0;
+    width: 100vw;
+    /* line-height: 0; */
     z-index: 1;
+    overflow: hidden; /* Ensures no part of the SVG exceeds the screen */
   }
   
   .curve svg {
     position: relative;
     display: block;
-    width: 100%;
-    height: 150px;
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
   }
+  
   
   .curve path {
     fill: #d4d4d4;
@@ -404,9 +406,9 @@ main {
 
 /* Room List */
 .container1 {
-  /* margin: 5rem; */
+  margin: 5rem;
   z-index: 3;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
 }
 
 .battles{
