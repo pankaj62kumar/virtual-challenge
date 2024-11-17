@@ -375,9 +375,23 @@ main {
       font-size: clamp(1.8rem, 5vw, 2.5rem);
     }
   
-    .curve svg {
-      height: 100px;
-    }
+    .curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    /* line-height: 0; */
+    z-index: 1;
+    overflow: hidden; /* Ensures no part of the SVG exceeds the screen */
+  }
+  
+  .curve svg {
+    position: relative;
+    display: block;
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
+  }
+
   }
   
   @media (max-width: 480px) {
@@ -398,9 +412,22 @@ main {
       font-size: 1rem;
     }
   
-    .curve svg {
-      height: 70px;
-    }
+    .curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    /* line-height: 0; */
+    z-index: 1;
+    overflow: hidden; /* Ensures no part of the SVG exceeds the screen */
+  }
+  
+  .curve svg {
+    position: relative;
+    display: block;
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
+  }
   }
 
 
