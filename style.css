@@ -285,13 +285,13 @@ nav a:hover {
 .curve {
   position: relative;
   width: 100%;
-  margin-top: -2rem;
+  margin-top: -8rem;
 }
 
 .curve svg {
   display: block;
   width: 100%;
-  height: auto;
+  height: 300px;
 }
 
 
