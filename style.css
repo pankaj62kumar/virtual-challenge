@@ -424,12 +424,12 @@ nav a:hover {
 
 /* Room List */
 .container1 {
-  margin: 5rem;
+  margin: 0 5rem 2rem 5rem;
   z-index: 3;
 }
 
 .battles{
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 20px;
   z-index: 10;
 }
