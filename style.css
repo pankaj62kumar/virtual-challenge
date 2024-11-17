@@ -218,208 +218,188 @@ nav a:hover {
     }
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 2rem;
-  align-items: center;
-}
-
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 15px;
-}
-
-.content {
-  padding: 2rem;
-  text-align: left;
-  max-width: 500px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(239, 34, 34, 0.5);
-  backdrop-filter: blur(5px);
-}
-
-.content h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.content p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #d4d4d4;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.start_button {
-  background-color: #3e0ac3;
-  color: #fff;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.start_button:hover {
-  background-color: #5d3fb6;
-  transform: translateY(-2px);
-}
-
-.curve {
-  position: relative;
-  width: 100%;
-  margin-top: -2rem;
-}
-
-.curve svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-
-  main{
-    height: 300px;
+main {
+    background: linear-gradient(to right, #000000, #200404, rgb(38, 44, 0));
+    color: white;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
-
-
+  
   .container {
-      padding: 1rem;
-      gap: 1rem;
-  }
-
-  .content {
-      padding: 1.5rem;
-
-  }
-
-  .card{
-    display: none;
-  }
-
-  main{
-    height: 400px;
-  }
-
-  .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-}
-
-.card {
-    order: 1;
-}
-
-.content {
-  position: relative;
-  margin-top: 50px;
-    order: 2;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1500px;
+    width: 100%;
     margin: 0 auto;
-    text-align: center;
-}
-
-
+    padding: 4rem 2rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .card_image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .content {
+    padding: 2rem;
+    text-align: left;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+  }
+  
+  .content:hover {
+    transform: translateY(-5px);
+  }
+  
+  .content h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .content p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #d4d4d4;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .start_button {
+    background-color: #3e0ac3;
+    color: #fff;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .start_button:hover {
+    background-color: #5d3fb6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(93, 63, 182, 0.4);
+  }
+  
+  .start_button:active {
+    transform: translateY(0);
+  }
+  
   .curve {
-    margin-top: -7rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 1;
   }
   
   .curve svg {
+    position: relative;
     display: block;
     width: 100%;
-    height: 300px;
+    height: 150px;
   }
-
-  .container1{
-    margin-top: -50px;
+  
+  .curve path {
+    fill: #d4d4d4;
   }
-}
-
-@media (max-width: 768px) {
-
-  .nav_toggle {
-    display: block;
-    margin-left: auto; /* Ensures it stays aligned to the right */
-}
-
-.header {
-    grid-template-columns: auto auto; /* Logo and toggle in two grid columns */
-}
-
-
-  main{
-    height: 300px;
+  
+  @media (max-width: 1024px) {
+    .container {
+      padding: 2rem 1.5rem;
+      gap: 1.5rem;
+    }
+    
+    .content {
+      padding: 1.5rem;
+    }
   }
-  .container {
+  
+  @media (max-width: 768px) {
+    main {
+      min-height: 600px;
+      height: auto;
+    }
+  
+    .container {
       grid-template-columns: 1fr;
       text-align: center;
-  }
-
-  .card {
-      order: 1;
-  }
-
-  .content {
-      order: 2;
+      padding: 3rem 1rem;
+    }
+  
+    .card {
+      display: none;
+    }
+  
+    .content {
       margin: 0 auto;
       text-align: center;
-  }
-
-  .card img {
-      max-width: 80%;
-      margin: 0 auto;
-  }
-
-  .curve {
-    margin-top: -8rem;
-  }
-
-  .container1{
-    margin-top: 40px;
+    }
+  
+    .content h1 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+  
+    .curve svg {
+      height: 100px;
+    }
   }
   
-  .curve svg {
-    display: block;
-    width: 100%;
-    height: 220px;
-  }
-
-}
-@media (max-width: 420px) {
-  .curve {
-    margin-top: 0rem;
-    z-index: -1;
-  }
-
-  .container1{
-    margin-top: 50px;
-  }
+  @media (max-width: 480px) {
+    main {
+      min-height: 500px;
+    }
   
-  .curve svg {
-    display: block;
-    width: 100%;
-    height: 100px;
+    .container {
+      padding: 2rem 1rem;
+    }
+  
+    .content {
+      padding: 1.25rem;
+    }
+  
+    .start_button {
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+    }
+  
+    .curve svg {
+      height: 70px;
+    }
   }
-}
 
 
 /* Room List */
